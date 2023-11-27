@@ -25,7 +25,9 @@ confusionMatrix(factor(predictions), factor(test$default), positive = "TRUE")
 simplerModel <- glm(default~balance, family = "binomial", data = train)
 summary(simplerModel)
 xs <- train$balance
-ys <- predict(model, train, type = "response")
-plot(xs,ys, col="blue")
+ys <- predict(simplerModel, train, type = "response")
+line <- data.frame(xs, ys)
+line <- line[order(line$xs),]
+plot(line, col="blue", type = "l")
 points(xs[train$default == "Yes"], rep(1,length(xs[train$default == "Yes"]) ), col="red")
 points(xs[train$default == "No"], rep(0, length(xs[train$default == "No"])), col="green")
