@@ -7,7 +7,7 @@
     </config>
     <config key="model">
         <entry key="method" type="xstring" value="Absolute"/>
-        <entry key="samplingMethod" type="xstring" value="Random"/>
+        <entry key="samplingMethod" type="xstring" value="First"/>
         <entry key="fraction" type="xdouble" value="0.01"/>
         <entry key="count" type="xint" value="5000"/>
         <entry key="random_seed" type="xstring" isnull="true" value=""/>
@@ -47,6 +47,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="8d9f92c6-d758-4aab-bf95-e5f06e3ccfff"/>
+        <entry key="file_store_id" type="xstring" value="1fd8d388-30fb-4dfb-818e-df8690e4e63a"/>
     </config>
 </config>
