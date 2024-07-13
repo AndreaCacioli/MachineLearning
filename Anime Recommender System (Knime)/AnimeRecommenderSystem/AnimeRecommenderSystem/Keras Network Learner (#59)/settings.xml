@@ -33,8 +33,9 @@
                                 <entry key="11" type="xstring" value="Unknown"/>
                             </config>
                             <config key="excluded_names">
-                                <entry key="array-size" type="xint" value="1"/>
-                                <entry key="0" type="xstring" value="rating"/>
+                                <entry key="array-size" type="xint" value="2"/>
+                                <entry key="0" type="xstring" value="user_id"/>
+                                <entry key="1" type="xstring" value="rating"/>
                             </config>
                             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
                             <config key="name_pattern">
@@ -45,8 +46,8 @@
                             </config>
                             <config key="datatype">
                                 <config key="typelist">
-                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
@@ -74,19 +75,20 @@
                                 <entry key="0" type="xstring" value="rating"/>
                             </config>
                             <config key="excluded_names">
-                                <entry key="array-size" type="xint" value="12"/>
-                                <entry key="0" type="xstring" value="Score"/>
-                                <entry key="1" type="xstring" value="Episodes"/>
-                                <entry key="2" type="xstring" value="Studios"/>
-                                <entry key="3" type="xstring" value="Ranked"/>
-                                <entry key="4" type="xstring" value="Popularity"/>
-                                <entry key="5" type="xstring" value="TV"/>
-                                <entry key="6" type="xstring" value="Movie"/>
-                                <entry key="7" type="xstring" value="OVA"/>
-                                <entry key="8" type="xstring" value="Special"/>
-                                <entry key="9" type="xstring" value="ONA"/>
-                                <entry key="10" type="xstring" value="Music"/>
-                                <entry key="11" type="xstring" value="Unknown"/>
+                                <entry key="array-size" type="xint" value="13"/>
+                                <entry key="0" type="xstring" value="user_id"/>
+                                <entry key="1" type="xstring" value="Score"/>
+                                <entry key="2" type="xstring" value="Episodes"/>
+                                <entry key="3" type="xstring" value="Studios"/>
+                                <entry key="4" type="xstring" value="Ranked"/>
+                                <entry key="5" type="xstring" value="Popularity"/>
+                                <entry key="6" type="xstring" value="TV"/>
+                                <entry key="7" type="xstring" value="Movie"/>
+                                <entry key="8" type="xstring" value="OVA"/>
+                                <entry key="9" type="xstring" value="Special"/>
+                                <entry key="10" type="xstring" value="ONA"/>
+                                <entry key="11" type="xstring" value="Music"/>
+                                <entry key="12" type="xstring" value="Unknown"/>
                             </config>
                             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
                             <config key="name_pattern">
@@ -97,8 +99,8 @@
                             </config>
                             <config key="datatype">
                                 <config key="typelist">
-                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
@@ -255,7 +257,7 @@
         <entry key="python3_command" type="xstring" value=""/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
     <entry key="factory" type="xstring" value="org.knime.dl.keras.base.nodes.learner.DLKerasLearnerNodeFactory"/>
     <entry key="node-name" type="xstring" value="Keras Network Learner"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Deep Learning - Keras Integration"/>
@@ -268,21 +270,16 @@
     <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301554"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Keras Network Learner"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_spec_class" type="xstring" value="org.knime.dl.keras.base.portobjects.DLKerasNetworkPortObjectSpec"/>
-            <entry key="port_object_class" type="xstring" value="org.knime.dl.keras.base.portobjects.DLKerasNetworkPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Keras Deep Learning Network, Output Shape(s): [1]"/>
-            <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
-            <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
-            <entry key="port_dir_location" type="xstring" value="port_1"/>
+            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
         </config>
     </config>
     <config key="filestores">
-        <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="1216d87f-c477-4e53-bfa4-6b911ba717a2"/>
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>

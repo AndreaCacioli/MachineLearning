@@ -9,19 +9,19 @@
         <config key="column-filter">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="7"/>
-                <entry key="0" type="xstring" value="rating"/>
-                <entry key="1" type="xstring" value="Score"/>
-                <entry key="2" type="xstring" value="Type"/>
-                <entry key="3" type="xstring" value="Episodes"/>
-                <entry key="4" type="xstring" value="Studios"/>
-                <entry key="5" type="xstring" value="Ranked"/>
-                <entry key="6" type="xstring" value="Popularity"/>
+                <entry key="array-size" type="xint" value="8"/>
+                <entry key="0" type="xstring" value="user_id"/>
+                <entry key="1" type="xstring" value="rating"/>
+                <entry key="2" type="xstring" value="Score"/>
+                <entry key="3" type="xstring" value="Type"/>
+                <entry key="4" type="xstring" value="Episodes"/>
+                <entry key="5" type="xstring" value="Studios"/>
+                <entry key="6" type="xstring" value="Ranked"/>
+                <entry key="7" type="xstring" value="Popularity"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="2"/>
-                <entry key="0" type="xstring" value="user_id"/>
-                <entry key="1" type="xstring" value="Genres"/>
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="Genres"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -71,12 +71,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 979, Cols: 7"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 4887, Cols: 8"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="057b99aa-a5bd-48e9-a25f-028690475cd5"/>
+        <entry key="file_store_id" type="xstring" value="e6bb5ddf-3cfe-42e0-851a-621f4bbb41b3"/>
     </config>
 </config>

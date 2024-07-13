@@ -25,7 +25,8 @@
                 <entry key="11" type="xstring" value="Unknown"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="0"/>
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="user_id"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -87,6 +88,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="e158fa29-688c-4c70-aa32-380545e18a18"/>
+        <entry key="file_store_id" type="xstring" value="60fa0cc8-62d8-42f2-b2d4-d9026fb8e4a2"/>
     </config>
 </config>

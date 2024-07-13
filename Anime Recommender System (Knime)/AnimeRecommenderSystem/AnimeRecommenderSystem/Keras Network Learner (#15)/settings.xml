@@ -33,17 +33,18 @@
                                 <entry key="11" type="xstring" value="Unknown"/>
                             </config>
                             <config key="excluded_names">
-                                <entry key="array-size" type="xint" value="10"/>
-                                <entry key="0" type="xstring" value="9"/>
-                                <entry key="1" type="xstring" value="6"/>
-                                <entry key="2" type="xstring" value="8"/>
-                                <entry key="3" type="xstring" value="10"/>
-                                <entry key="4" type="xstring" value="5"/>
-                                <entry key="5" type="xstring" value="7"/>
-                                <entry key="6" type="xstring" value="3"/>
-                                <entry key="7" type="xstring" value="1"/>
-                                <entry key="8" type="xstring" value="4"/>
-                                <entry key="9" type="xstring" value="2"/>
+                                <entry key="array-size" type="xint" value="11"/>
+                                <entry key="0" type="xstring" value="user_id"/>
+                                <entry key="1" type="xstring" value="1"/>
+                                <entry key="2" type="xstring" value="2"/>
+                                <entry key="3" type="xstring" value="3"/>
+                                <entry key="4" type="xstring" value="4"/>
+                                <entry key="5" type="xstring" value="5"/>
+                                <entry key="6" type="xstring" value="6"/>
+                                <entry key="7" type="xstring" value="7"/>
+                                <entry key="8" type="xstring" value="8"/>
+                                <entry key="9" type="xstring" value="9"/>
+                                <entry key="10" type="xstring" value="10"/>
                             </config>
                             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
                             <config key="name_pattern">
@@ -54,8 +55,8 @@
                             </config>
                             <config key="datatype">
                                 <config key="typelist">
-                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
@@ -80,31 +81,32 @@
                             <entry key="filter-type" type="xstring" value="STANDARD"/>
                             <config key="included_names">
                                 <entry key="array-size" type="xint" value="10"/>
-                                <entry key="0" type="xstring" value="9"/>
-                                <entry key="1" type="xstring" value="6"/>
-                                <entry key="2" type="xstring" value="8"/>
-                                <entry key="3" type="xstring" value="10"/>
+                                <entry key="0" type="xstring" value="1"/>
+                                <entry key="1" type="xstring" value="2"/>
+                                <entry key="2" type="xstring" value="3"/>
+                                <entry key="3" type="xstring" value="4"/>
                                 <entry key="4" type="xstring" value="5"/>
-                                <entry key="5" type="xstring" value="7"/>
-                                <entry key="6" type="xstring" value="3"/>
-                                <entry key="7" type="xstring" value="1"/>
-                                <entry key="8" type="xstring" value="4"/>
-                                <entry key="9" type="xstring" value="2"/>
+                                <entry key="5" type="xstring" value="6"/>
+                                <entry key="6" type="xstring" value="7"/>
+                                <entry key="7" type="xstring" value="8"/>
+                                <entry key="8" type="xstring" value="9"/>
+                                <entry key="9" type="xstring" value="10"/>
                             </config>
                             <config key="excluded_names">
-                                <entry key="array-size" type="xint" value="12"/>
-                                <entry key="0" type="xstring" value="Score"/>
-                                <entry key="1" type="xstring" value="Episodes"/>
-                                <entry key="2" type="xstring" value="Studios"/>
-                                <entry key="3" type="xstring" value="Ranked"/>
-                                <entry key="4" type="xstring" value="Popularity"/>
-                                <entry key="5" type="xstring" value="TV"/>
-                                <entry key="6" type="xstring" value="Movie"/>
-                                <entry key="7" type="xstring" value="OVA"/>
-                                <entry key="8" type="xstring" value="Special"/>
-                                <entry key="9" type="xstring" value="ONA"/>
-                                <entry key="10" type="xstring" value="Music"/>
-                                <entry key="11" type="xstring" value="Unknown"/>
+                                <entry key="array-size" type="xint" value="13"/>
+                                <entry key="0" type="xstring" value="user_id"/>
+                                <entry key="1" type="xstring" value="Score"/>
+                                <entry key="2" type="xstring" value="Episodes"/>
+                                <entry key="3" type="xstring" value="Studios"/>
+                                <entry key="4" type="xstring" value="Ranked"/>
+                                <entry key="5" type="xstring" value="Popularity"/>
+                                <entry key="6" type="xstring" value="TV"/>
+                                <entry key="7" type="xstring" value="Movie"/>
+                                <entry key="8" type="xstring" value="OVA"/>
+                                <entry key="9" type="xstring" value="Special"/>
+                                <entry key="10" type="xstring" value="ONA"/>
+                                <entry key="11" type="xstring" value="Music"/>
+                                <entry key="12" type="xstring" value="Unknown"/>
                             </config>
                             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
                             <config key="name_pattern">
@@ -115,8 +117,8 @@
                             </config>
                             <config key="datatype">
                                 <config key="typelist">
-                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.IntValue" type="xboolean" value="false"/>
+                                    <entry key="org.knime.core.data.DoubleValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.BooleanValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.LongValue" type="xboolean" value="false"/>
                                     <entry key="org.knime.core.data.StringValue" type="xboolean" value="false"/>
@@ -221,36 +223,36 @@
                 </config>
             </config>
             <config key="reduce_lr_on_plateau">
-                <entry key="enabled" type="xboolean" value="false"/>
+                <entry key="enabled" type="xboolean" value="true"/>
                 <config key="reduce_lr_on_plateau">
                     <config key="monitor">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="quantity" type="xstring" value="loss"/>
                         <entry key="output" type="xstring" value="network"/>
                         <entry key="validation" type="xboolean" value="false"/>
                     </config>
                     <config key="factor">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="factor" type="xdouble" value="0.1"/>
                     </config>
                     <config key="patience">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="patience" type="xint" value="10"/>
                     </config>
                     <config key="mode">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="mode" type="xstring" value="auto"/>
                     </config>
                     <config key="epsilon">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="epsilon" type="xdouble" value="1.0E-4"/>
                     </config>
                     <config key="cooldown">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="cooldown" type="xint" value="0"/>
                     </config>
                     <config key="min_lr">
-                        <entry key="enabled" type="xboolean" value="false"/>
+                        <entry key="enabled" type="xboolean" value="true"/>
                         <entry key="min_lr" type="xdouble" value="0.0"/>
                     </config>
                 </config>
@@ -274,10 +276,6 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
-    <config key="nodecontainer_message">
-        <entry key="type" type="xstring" value="WARNING"/>
-        <entry key="message" type="xstring" value="Training stopped in epoch 35 as the monitored quantity has stopped improving (early stopping)."/>
-    </config>
     <entry key="factory" type="xstring" value="org.knime.dl.keras.base.nodes.learner.DLKerasLearnerNodeFactory"/>
     <entry key="node-name" type="xstring" value="Keras Network Learner"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Deep Learning - Keras Integration"/>
@@ -305,6 +303,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="a6c9a511-729a-48ac-a642-ed8c223e04b8"/>
+        <entry key="file_store_id" type="xstring" value="56c19013-c2ab-4208-8a56-b3a41ddffd0b"/>
     </config>
 </config>

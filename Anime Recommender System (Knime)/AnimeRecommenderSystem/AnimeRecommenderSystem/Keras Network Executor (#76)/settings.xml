@@ -16,7 +16,7 @@
                 <entry key="SettingsModelID" type="xstring" value="SMID_integer"/>
                 <entry key="EnabledStatus" type="xboolean" value="true"/>
             </config>
-            <entry key="batch_size" type="xint" value="100"/>
+            <entry key="batch_size" type="xint" value="32"/>
             <config key="keep_input_columns_Internals">
                 <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
                 <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -52,9 +52,18 @@
                         <entry key="11" type="xstring" value="Unknown"/>
                     </config>
                     <config key="excluded_names">
-                        <entry key="array-size" type="xint" value="2"/>
+                        <entry key="array-size" type="xint" value="11"/>
                         <entry key="0" type="xstring" value="user_id"/>
-                        <entry key="1" type="xstring" value="rating"/>
+                        <entry key="1" type="xstring" value="4"/>
+                        <entry key="2" type="xstring" value="9"/>
+                        <entry key="3" type="xstring" value="6"/>
+                        <entry key="4" type="xstring" value="10"/>
+                        <entry key="5" type="xstring" value="8"/>
+                        <entry key="6" type="xstring" value="7"/>
+                        <entry key="7" type="xstring" value="5"/>
+                        <entry key="8" type="xstring" value="3"/>
+                        <entry key="9" type="xstring" value="2"/>
+                        <entry key="10" type="xstring" value="1"/>
                     </config>
                     <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
                     <config key="name_pattern">
@@ -77,7 +86,7 @@
             </config>
         </config>
         <config key="outputs">
-            <config key="NetOut_1_0:0">
+            <config key="softmax_1_0:0">
                 <config key="output_converter_Internals">
                     <entry key="SettingsModelID" type="xstring" value="SMID_stringarray"/>
                     <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -91,7 +100,7 @@
                     <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
                     <entry key="EnabledStatus" type="xboolean" value="true"/>
                 </config>
-                <entry key="output_prefix" type="xstring" value="NetOut_1/BiasAdd:0_"/>
+                <entry key="output_prefix" type="xstring" value="softmax_1/Softmax:0_"/>
             </config>
         </config>
         <config key="outputs_ordered_Internals">
@@ -100,7 +109,7 @@
         </config>
         <config key="outputs_ordered">
             <entry key="array-size" type="xint" value="1"/>
-            <entry key="0" type="xstring" value="NetOut_1_0:0"/>
+            <entry key="0" type="xstring" value="softmax_1_0:0"/>
         </config>
         <entry key="python3_command" type="xstring" value=""/>
         <config key="gpu_selection_settings">
@@ -111,7 +120,7 @@
         </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <entry key="factory" type="xstring" value="org.knime.dl.keras.base.nodes.executor.DLKerasExecutorNodeFactory"/>
     <entry key="node-name" type="xstring" value="Keras Network Executor"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Deep Learning - Keras Integration"/>
@@ -124,16 +133,19 @@
     <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301554"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Keras Network Executor"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
         <config key="port_1">
             <entry key="index" type="xint" value="1"/>
-            <entry key="port_dir_location" type="xstring" isnull="true" value=""/>
+            <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+            <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 1467, Cols: 33"/>
+            <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="5f9a5f36-350b-48a5-aea3-752461084a2c"/>
     </config>
 </config>

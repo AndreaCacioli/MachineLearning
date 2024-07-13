@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+    <entry key="node_file" type="xstring" value="settings.xml"/>
+    <config key="flow_stack"/>
+    <config key="internal_node_subsettings">
+        <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+    </config>
+    <config key="model">
+        <entry key="script" type="xstring" value="import knime.scripting.io as knio%%00010%%00010# This example script plots a histogram using matplotlib and assigns it to the output view%%00010import numpy as np%%00010import matplotlib.pyplot as plt%%00010%%00010# Only use numeric columns%%00010data = knio.input_tables[0].to_pandas().select_dtypes('number')%%00010%%00010actual_rating = int(data[&quot;rating&quot;][0])%%00010col_names = [f&quot;softmax_1/Softmax:0_{i}&quot; for i in range(10)]%%00010network_predictions = list(data[col_names].values[0])%%00010%%00010%%00010# Plot the histogram%%00010fig = plt.figure()%%00010plt.bar([i + 1 for i in range(10)], network_predictions)%%00010plt.plot(actual_rating, 0, 'ro',)%%00010%%00010# Assign the figure to the output_view variable%%00010knio.output_view = knio.view(fig)  # alternative: knio.view_matplotlib()%%00010"/>
+        <entry key="python3_command" type="xstring" value=""/>
+    </config>
+    <config key="variables">
+        <entry key="version" type="xstring" value="V_2019_09_13"/>
+        <config key="tree">
+            <config key="python3_command">
+                <entry key="used_variable" type="xstring" value=""/>
+                <entry key="used_variable_flawed" type="xboolean" value="false"/>
+                <entry key="exposed_variable" type="xstring" isnull="true" value=""/>
+            </config>
+        </config>
+    </config>
+    <entry key="customDescription" type="xstring" isnull="true" value=""/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="factory" type="xstring" value="org.knime.python3.scripting.nodes2.view.PythonViewNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Python View"/>
+    <entry key="node-bundle-name" type="xstring" value="KNIME Python 3 - Scripting Nodes"/>
+    <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.python3.scripting.nodes"/>
+    <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-bundle-version" type="xstring" value="5.2.4.v202405171011"/>
+    <entry key="node-feature-name" type="xstring" value="KNIME Python Integration"/>
+    <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.python3.scripting.feature.group"/>
+    <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+    <entry key="node-feature-version" type="xstring" value="5.2.4.v202405171011"/>
+    <config key="factory_settings"/>
+    <config key="node_creation_config">
+        <config key="Input object (pickled)"/>
+        <config key="Input table">
+            <config key="port_0">
+                <entry key="object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+            </config>
+        </config>
+        <config key="Output image"/>
+    </config>
+    <entry key="name" type="xstring" value="Python View"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="isInactive" type="xboolean" value="false"/>
+    <config key="ports"/>
+    <config key="filestores">
+        <entry key="file_store_location" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="8e8a1391-1a2c-4533-9a45-255172721899"/>
+    </config>
+</config>

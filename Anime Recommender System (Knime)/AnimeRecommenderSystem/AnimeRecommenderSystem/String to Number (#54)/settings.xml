@@ -39,22 +39,6 @@
         </config>
         <entry key="generic_parse" type="xboolean" value="false"/>
         <entry key="fail_on_error" type="xboolean" value="false"/>
-        <config key="decimal_separator_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="thousands_separator_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="generic_parse_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="fail_on_error_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
     </config>
     <config key="nodeAnnotation">
         <entry key="text" type="xstring" value="From class to rating (number)"/>
@@ -92,12 +76,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 294, Cols: 14"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 1467, Cols: 15"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="dd721fbd-1e78-4580-8030-5fe386eca89d"/>
+        <entry key="file_store_id" type="xstring" value="fb6ce7d7-52d4-463a-874e-532e8dd909fb"/>
     </config>
 </config>

@@ -6,19 +6,27 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
-        <config key="include_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="include">
+        <config key="column-filter">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="2"/>
-                <entry key="0" type="xstring" value="Predicted Class"/>
-                <entry key="1" type="xstring" value="Actual"/>
+                <entry key="array-size" type="xint" value="13"/>
+                <entry key="0" type="xstring" value="rating"/>
+                <entry key="1" type="xstring" value="Score"/>
+                <entry key="2" type="xstring" value="Episodes"/>
+                <entry key="3" type="xstring" value="Studios"/>
+                <entry key="4" type="xstring" value="Ranked"/>
+                <entry key="5" type="xstring" value="Popularity"/>
+                <entry key="6" type="xstring" value="TV"/>
+                <entry key="7" type="xstring" value="Movie"/>
+                <entry key="8" type="xstring" value="OVA"/>
+                <entry key="9" type="xstring" value="Special"/>
+                <entry key="10" type="xstring" value="ONA"/>
+                <entry key="11" type="xstring" value="Music"/>
+                <entry key="12" type="xstring" value="Unknown"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="0"/>
+                <entry key="array-size" type="xint" value="1"/>
+                <entry key="0" type="xstring" value="user_id"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -31,35 +39,11 @@
                 <config key="typelist"/>
             </config>
         </config>
-        <entry key="decimal_separator" type="xstring" value="."/>
-        <entry key="thousands_separator" type="xstring" value=""/>
-        <config key="parse_type">
-            <entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
-            <entry key="is_null" type="xboolean" value="false"/>
-        </config>
-        <entry key="generic_parse" type="xboolean" value="false"/>
-        <entry key="fail_on_error" type="xboolean" value="false"/>
-        <config key="decimal_separator_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="thousands_separator_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="generic_parse_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <config key="fail_on_error_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_boolean"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
-    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.colconvert.stringtonumber2.StringToNumber2NodeFactory"/>
-    <entry key="node-name" type="xstring" value="String to Number"/>
+    <entry key="factory" type="xstring" value="org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory"/>
+    <entry key="node-name" type="xstring" value="Column Filter"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Base Nodes"/>
     <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.base"/>
     <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
@@ -69,7 +53,7 @@
     <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
     <entry key="node-feature-version" type="xstring" value="5.2.4.v202405041851"/>
     <config key="factory_settings"/>
-    <entry key="name" type="xstring" value="String to Number"/>
+    <entry key="name" type="xstring" value="Column Filter"/>
     <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports">
@@ -77,12 +61,12 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 334, Cols: 19"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 3420, Cols: 13"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="af8ff679-5a4b-4a79-83de-780619abd53c"/>
+        <entry key="file_store_id" type="xstring" value="fbd6f7e8-e216-465c-9b9d-6226b7290959"/>
     </config>
 </config>
