@@ -12,24 +12,24 @@
         <config key="data-column-filter">
             <entry key="filter-type" type="xstring" value="STANDARD"/>
             <config key="included_names">
-                <entry key="array-size" type="xint" value="1"/>
-                <entry key="0" type="xstring" value="rating"/>
+                <entry key="array-size" type="xint" value="0"/>
             </config>
             <config key="excluded_names">
-                <entry key="array-size" type="xint" value="13"/>
+                <entry key="array-size" type="xint" value="14"/>
                 <entry key="0" type="xstring" value="user_id"/>
-                <entry key="1" type="xstring" value="Score"/>
-                <entry key="2" type="xstring" value="Episodes"/>
-                <entry key="3" type="xstring" value="Studios"/>
-                <entry key="4" type="xstring" value="Ranked"/>
-                <entry key="5" type="xstring" value="Popularity"/>
-                <entry key="6" type="xstring" value="TV"/>
-                <entry key="7" type="xstring" value="Movie"/>
-                <entry key="8" type="xstring" value="OVA"/>
-                <entry key="9" type="xstring" value="Special"/>
-                <entry key="10" type="xstring" value="ONA"/>
-                <entry key="11" type="xstring" value="Music"/>
-                <entry key="12" type="xstring" value="Unknown"/>
+                <entry key="1" type="xstring" value="rating"/>
+                <entry key="2" type="xstring" value="Score"/>
+                <entry key="3" type="xstring" value="Episodes"/>
+                <entry key="4" type="xstring" value="Studios"/>
+                <entry key="5" type="xstring" value="Ranked"/>
+                <entry key="6" type="xstring" value="Popularity"/>
+                <entry key="7" type="xstring" value="TV"/>
+                <entry key="8" type="xstring" value="Movie"/>
+                <entry key="9" type="xstring" value="OVA"/>
+                <entry key="10" type="xstring" value="Special"/>
+                <entry key="11" type="xstring" value="ONA"/>
+                <entry key="12" type="xstring" value="Music"/>
+                <entry key="13" type="xstring" value="Unknown"/>
             </config>
             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
             <config key="name_pattern">
@@ -67,14 +67,14 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
-            <entry key="port_object_summary" type="xstring" value="Rows: 4946, Cols: 14"/>
+            <entry key="port_object_summary" type="xstring" value="Rows: 4946, Cols: 23"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
         </config>
         <config key="port_2">
             <entry key="index" type="xint" value="2"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.base.data.normalize.NormalizerPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Min/Max (0.0, 1) normalization on 1 column(s)"/>
+            <entry key="port_object_summary" type="xstring" value="Min/Max (0.0, 1) normalization on 10 column(s)"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_2"/>
@@ -82,6 +82,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="8ae180f7-75b4-4f19-a9b7-a0aef157f8c6"/>
+        <entry key="file_store_id" type="xstring" value="b6d2a4b8-3e6d-4705-9e44-ccd907654445"/>
     </config>
 </config>

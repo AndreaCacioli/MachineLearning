@@ -10,7 +10,7 @@
             <entry key="enabledStatus" type="xboolean" value="false"/>
         </config>
         <config key="m_shape">
-            <entry key="DLKerasTuple.Tuple" type="xstring" value="12"/>
+            <entry key="DLKerasTuple.Tuple" type="xstring" value="21"/>
             <entry key="DLKerasTuple.Min" type="xint" value="1"/>
             <entry key="DLKerasTuple.Max" type="xint" value="2147483647"/>
             <entry key="DLKerasTuple.IsEnabled" type="xboolean" value="true"/>
@@ -58,7 +58,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.dl.keras.base.portobjects.DLKerasUnmaterializedNetworkPortObjectSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.dl.keras.base.portobjects.DLKerasUnmaterializedNetworkPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Keras Deep Learning Network, Output Shape(s): [12]"/>
+            <entry key="port_object_summary" type="xstring" value="Keras Deep Learning Network, Output Shape(s): [21]"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
@@ -66,6 +66,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="fa33a7fe-45ed-4c4b-98a6-ff5b4a31812a"/>
+        <entry key="file_store_id" type="xstring" value="2feef13a-958f-45a3-946b-05ed50e092d4"/>
     </config>
 </config>

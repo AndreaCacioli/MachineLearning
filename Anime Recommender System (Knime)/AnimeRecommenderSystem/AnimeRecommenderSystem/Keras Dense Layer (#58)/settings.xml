@@ -16,7 +16,7 @@
             <entry key="tensor-dimension-order" type="xint" value="0"/>
         </config>
         <entry key="m_units" type="xlong" value="5"/>
-        <entry key="m_activation" type="xstring" value="SIGMOID"/>
+        <entry key="m_activation" type="xstring" value="RELU"/>
         <entry key="m_useBias" type="xboolean" value="true"/>
         <config key="m_kernelInitializer">
             <entry key="struct-type" type="xstring" value="org.knime.dl.keras.core.config.initializer.DLKerasGlorotUniformInitializer"/>
@@ -73,6 +73,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="eb32563a-e169-4539-a12d-981a43bcaf94"/>
+        <entry key="file_store_id" type="xstring" value="da7d0dc5-1e45-4f12-b613-c72f4d89cb6b"/>
     </config>
 </config>

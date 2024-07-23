@@ -12,12 +12,12 @@
         </config>
         <config key="m_spec">
             <entry key="tensor-element-type" type="xstring" value="float"/>
-            <entry key="tensor-id" type="xstring" value="dropout_2_0:0"/>
-            <entry key="tensor-name" type="xstring" value="dropout_2_0:0"/>
+            <entry key="tensor-id" type="xstring" value="dense_9_0:0"/>
+            <entry key="tensor-name" type="xstring" value="dense_9_0:0"/>
             <entry key="tensor-dimension-order" type="xint" value="0"/>
         </config>
         <entry key="m_units" type="xlong" value="1"/>
-        <entry key="m_activation" type="xstring" value="SIGMOID"/>
+        <entry key="m_activation" type="xstring" value="LINEAR"/>
         <entry key="m_useBias" type="xboolean" value="true"/>
         <config key="m_kernelInitializer">
             <entry key="struct-type" type="xstring" value="org.knime.dl.keras.core.config.initializer.DLKerasGlorotUniformInitializer"/>
@@ -74,6 +74,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="45463f69-9991-4889-8de1-cbccb321a4f7"/>
+        <entry key="file_store_id" type="xstring" value="ea9789e9-e122-4d04-9376-5ef1195d30e1"/>
     </config>
 </config>

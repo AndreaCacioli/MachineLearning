@@ -7,7 +7,22 @@
     </config>
     <config key="model">
         <config key="selectedColumns">
-            <config key="selected_Internals"/>
+            <config key="selected_Internals">
+                <entry key="array-size" type="xint" value="13"/>
+                <entry key="0" type="xstring" value="user_id"/>
+                <entry key="1" type="xstring" value="rating"/>
+                <entry key="2" type="xstring" value="Score"/>
+                <entry key="3" type="xstring" value="Episodes"/>
+                <entry key="4" type="xstring" value="Studios"/>
+                <entry key="5" type="xstring" value="Ranked"/>
+                <entry key="6" type="xstring" value="Popularity"/>
+                <entry key="7" type="xstring" value="TV"/>
+                <entry key="8" type="xstring" value="Movie"/>
+                <entry key="9" type="xstring" value="OVA"/>
+                <entry key="10" type="xstring" value="Special"/>
+                <entry key="11" type="xstring" value="Music"/>
+                <entry key="12" type="xstring" value="ONA"/>
+            </config>
             <entry key="mode" type="xstring" value="MANUAL"/>
             <config key="patternFilter">
                 <entry key="pattern" type="xstring" value=""/>
@@ -16,7 +31,7 @@
             </config>
             <config key="manualFilter">
                 <config key="manuallySelected">
-                    <entry key="array-size" type="xint" value="14"/>
+                    <entry key="array-size" type="xint" value="13"/>
                     <entry key="0" type="xstring" value="user_id"/>
                     <entry key="1" type="xstring" value="rating"/>
                     <entry key="2" type="xstring" value="Score"/>
@@ -28,12 +43,21 @@
                     <entry key="8" type="xstring" value="Movie"/>
                     <entry key="9" type="xstring" value="OVA"/>
                     <entry key="10" type="xstring" value="Special"/>
-                    <entry key="11" type="xstring" value="ONA"/>
-                    <entry key="12" type="xstring" value="Music"/>
-                    <entry key="13" type="xstring" value="Unknown"/>
+                    <entry key="11" type="xstring" value="Music"/>
+                    <entry key="12" type="xstring" value="ONA"/>
                 </config>
                 <config key="manuallyDeselected">
-                    <entry key="array-size" type="xint" value="0"/>
+                    <entry key="array-size" type="xint" value="10"/>
+                    <entry key="0" type="xstring" value="Comedy"/>
+                    <entry key="1" type="xstring" value="Action"/>
+                    <entry key="2" type="xstring" value="Romance"/>
+                    <entry key="3" type="xstring" value="Drama"/>
+                    <entry key="4" type="xstring" value="Supernatural"/>
+                    <entry key="5" type="xstring" value="School"/>
+                    <entry key="6" type="xstring" value="Fantasy"/>
+                    <entry key="7" type="xstring" value="Shounen"/>
+                    <entry key="8" type="xstring" value="Adventure"/>
+                    <entry key="9" type="xstring" value="Sci-Fi"/>
                 </config>
                 <entry key="includeUnknownColumns" type="xboolean" value="false"/>
             </config>
@@ -83,7 +107,7 @@
         <entry key="skipRemainingColumns_Internals" type="xboolean" value="false"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="CONFIGURED"/>
+    <entry key="state" type="xstring" value="EXECUTED"/>
     <entry key="factory" type="xstring" value="org.knime.base.views.node.statistics.StatisticsNodeFactory"/>
     <entry key="node-name" type="xstring" value="Statistics View"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Views"/>
@@ -96,11 +120,21 @@
     <entry key="node-feature-version" type="xstring" value="5.2.4.v202405171011"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Statistics View"/>
-    <entry key="hasContent" type="xboolean" value="false"/>
+    <entry key="hasContent" type="xboolean" value="true"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports"/>
+    <config key="internalObjects">
+        <entry key="location" type="xstring" value="internalTables"/>
+        <config key="content">
+            <config key="object_0">
+                <entry key="index" type="xint" value="0"/>
+                <entry key="type" type="xstring" value="table"/>
+                <entry key="table_dir_location" type="xstring" value="object_0"/>
+            </config>
+        </config>
+    </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
+        <entry key="file_store_id" type="xstring" value="be945708-4115-4216-8ee1-c89afbb2ec30"/>
     </config>
 </config>

@@ -45,7 +45,7 @@
             <entry key="index" type="xint" value="1"/>
             <entry key="port_spec_class" type="xstring" value="org.knime.dl.keras.base.portobjects.DLKerasUnmaterializedNetworkPortObjectSpec"/>
             <entry key="port_object_class" type="xstring" value="org.knime.dl.keras.base.portobjects.DLKerasUnmaterializedNetworkPortObject"/>
-            <entry key="port_object_summary" type="xstring" value="Keras Deep Learning Network, Output Shape(s): [12]"/>
+            <entry key="port_object_summary" type="xstring" value="Keras Deep Learning Network, Output Shape(s): [21]"/>
             <entry key="port_spec_location" type="xstring" value="spec/spec.zip"/>
             <entry key="port_object_location" type="xstring" value="object/portobject.zip"/>
             <entry key="port_dir_location" type="xstring" value="port_1"/>
@@ -53,6 +53,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="bd1c2c12-f68d-4d34-a1bf-bfe063e133af"/>
+        <entry key="file_store_id" type="xstring" value="58b72645-00b5-4d53-bf77-767de86f1913"/>
     </config>
 </config>
