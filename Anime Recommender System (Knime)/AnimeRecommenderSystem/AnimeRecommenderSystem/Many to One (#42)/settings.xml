@@ -6,6 +6,11 @@
         <entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
     </config>
     <config key="model">
+        <config key="many2OneCondenseColName_Internals">
+            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
+            <entry key="EnabledStatus" type="xboolean" value="true"/>
+        </config>
+        <entry key="many2OneCondenseColName" type="xstring" value="rating"/>
         <config key="many2OneCols2Condense_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_columnfilter"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -84,11 +89,6 @@
                 </config>
             </config>
         </config>
-        <config key="many2OneCondenseColName_Internals">
-            <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
-            <entry key="EnabledStatus" type="xboolean" value="true"/>
-        </config>
-        <entry key="many2OneCondenseColName" type="xstring" value="rating"/>
         <config key="includeMethod_Internals">
             <entry key="SettingsModelID" type="xstring" value="SMID_string"/>
             <entry key="EnabledStatus" type="xboolean" value="true"/>
@@ -147,6 +147,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="3b85837e-3900-4359-bd77-ee7adfa1e95d"/>
+        <entry key="file_store_id" type="xstring" value="ee03ffa7-056f-47fe-8448-7e11b7f70f3e"/>
     </config>
 </config>

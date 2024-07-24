@@ -14,15 +14,14 @@
         <config key="xAxisColumn">
             <entry key="selected" type="xstring" value="rating"/>
             <config key="compatibleTypes_Internals">
-                <entry key="array-size" type="xint" value="8"/>
-                <entry key="0" type="xstring" value="org.knime.core.data.IntValue"/>
+                <entry key="array-size" type="xint" value="7"/>
+                <entry key="0" type="xstring" value="org.knime.core.data.LongValue"/>
                 <entry key="1" type="xstring" value="org.knime.core.data.DataValue"/>
-                <entry key="2" type="xstring" value="org.knime.core.data.LongValue"/>
-                <entry key="3" type="xstring" value="org.knime.core.data.DoubleValue"/>
-                <entry key="4" type="xstring" value="org.knime.core.data.ComplexNumberValue"/>
-                <entry key="5" type="xstring" value="org.knime.core.data.FuzzyNumberValue"/>
-                <entry key="6" type="xstring" value="org.knime.core.data.FuzzyIntervalValue"/>
-                <entry key="7" type="xstring" value="org.knime.core.data.BoundedValue"/>
+                <entry key="2" type="xstring" value="org.knime.core.data.DoubleValue"/>
+                <entry key="3" type="xstring" value="org.knime.core.data.ComplexNumberValue"/>
+                <entry key="4" type="xstring" value="org.knime.core.data.FuzzyNumberValue"/>
+                <entry key="5" type="xstring" value="org.knime.core.data.FuzzyIntervalValue"/>
+                <entry key="6" type="xstring" value="org.knime.core.data.BoundedValue"/>
             </config>
         </config>
         <config key="yAxisColumn">
@@ -78,7 +77,7 @@
         <config key="styles"/>
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
-    <entry key="state" type="xstring" value="EXECUTED"/>
+    <entry key="state" type="xstring" value="CONFIGURED"/>
     <entry key="factory" type="xstring" value="org.knime.base.views.node.scatterplot.ScatterPlotNodeFactory"/>
     <entry key="node-name" type="xstring" value="Scatter Plot"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Views"/>
@@ -95,21 +94,11 @@
         <config key="Output Image"/>
     </config>
     <entry key="name" type="xstring" value="Scatter Plot"/>
-    <entry key="hasContent" type="xboolean" value="true"/>
+    <entry key="hasContent" type="xboolean" value="false"/>
     <entry key="isInactive" type="xboolean" value="false"/>
     <config key="ports"/>
-    <config key="internalObjects">
-        <entry key="location" type="xstring" value="internalTables"/>
-        <config key="content">
-            <config key="object_0">
-                <entry key="index" type="xint" value="0"/>
-                <entry key="type" type="xstring" value="table"/>
-                <entry key="table_dir_location" type="xstring" value="object_0"/>
-            </config>
-        </config>
-    </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" isnull="true" value=""/>
-        <entry key="file_store_id" type="xstring" value="584cb2f6-54a1-44d7-a046-83d4a7f63aea"/>
+        <entry key="file_store_id" type="xstring" isnull="true" value=""/>
     </config>
 </config>

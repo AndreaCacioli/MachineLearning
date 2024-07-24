@@ -27,19 +27,19 @@
                                 <entry key="5" type="xstring" value="Comedy"/>
                                 <entry key="6" type="xstring" value="Action"/>
                                 <entry key="7" type="xstring" value="Romance"/>
-                                <entry key="8" type="xstring" value="Drama"/>
-                                <entry key="9" type="xstring" value="Supernatural"/>
+                                <entry key="8" type="xstring" value="Fantasy"/>
+                                <entry key="9" type="xstring" value="Drama"/>
                                 <entry key="10" type="xstring" value="School"/>
-                                <entry key="11" type="xstring" value="Fantasy"/>
-                                <entry key="12" type="xstring" value="Shounen"/>
-                                <entry key="13" type="xstring" value="Adventure"/>
-                                <entry key="14" type="xstring" value="Sci-Fi"/>
+                                <entry key="11" type="xstring" value="Adventure"/>
+                                <entry key="12" type="xstring" value="Supernatural"/>
+                                <entry key="13" type="xstring" value="Sci-Fi"/>
+                                <entry key="14" type="xstring" value="Shounen"/>
                                 <entry key="15" type="xstring" value="TV"/>
-                                <entry key="16" type="xstring" value="Movie"/>
-                                <entry key="17" type="xstring" value="OVA"/>
+                                <entry key="16" type="xstring" value="OVA"/>
+                                <entry key="17" type="xstring" value="Movie"/>
                                 <entry key="18" type="xstring" value="Special"/>
-                                <entry key="19" type="xstring" value="Music"/>
-                                <entry key="20" type="xstring" value="ONA"/>
+                                <entry key="19" type="xstring" value="ONA"/>
+                                <entry key="20" type="xstring" value="Music"/>
                             </config>
                             <config key="excluded_names">
                                 <entry key="array-size" type="xint" value="11"/>
@@ -112,19 +112,19 @@
                                 <entry key="6" type="xstring" value="Comedy"/>
                                 <entry key="7" type="xstring" value="Action"/>
                                 <entry key="8" type="xstring" value="Romance"/>
-                                <entry key="9" type="xstring" value="Drama"/>
-                                <entry key="10" type="xstring" value="Supernatural"/>
+                                <entry key="9" type="xstring" value="Fantasy"/>
+                                <entry key="10" type="xstring" value="Drama"/>
                                 <entry key="11" type="xstring" value="School"/>
-                                <entry key="12" type="xstring" value="Fantasy"/>
-                                <entry key="13" type="xstring" value="Shounen"/>
-                                <entry key="14" type="xstring" value="Adventure"/>
-                                <entry key="15" type="xstring" value="Sci-Fi"/>
+                                <entry key="12" type="xstring" value="Adventure"/>
+                                <entry key="13" type="xstring" value="Supernatural"/>
+                                <entry key="14" type="xstring" value="Sci-Fi"/>
+                                <entry key="15" type="xstring" value="Shounen"/>
                                 <entry key="16" type="xstring" value="TV"/>
-                                <entry key="17" type="xstring" value="Movie"/>
-                                <entry key="18" type="xstring" value="OVA"/>
+                                <entry key="17" type="xstring" value="OVA"/>
+                                <entry key="18" type="xstring" value="Movie"/>
                                 <entry key="19" type="xstring" value="Special"/>
-                                <entry key="20" type="xstring" value="Music"/>
-                                <entry key="21" type="xstring" value="ONA"/>
+                                <entry key="20" type="xstring" value="ONA"/>
+                                <entry key="21" type="xstring" value="Music"/>
                                 <entry key="22" type="xstring" value="Unknown"/>
                             </config>
                             <entry key="enforce_option" type="xstring" value="EnforceExclusion"/>
@@ -149,7 +149,7 @@
                 </config>
                 <config key="loss_function">
                     <entry key="enabled" type="xboolean" value="true"/>
-                    <entry key="loss_function" type="xstring" value="org.knime.dl.keras.core.training.DLKerasLossFunction.DLKerasBinaryCrossEntropy"/>
+                    <entry key="loss_function" type="xstring" value="org.knime.dl.keras.core.training.DLKerasLossFunction.DLKerasCategoricalCrossEntropy"/>
                 </config>
                 <config key="useCustomLoss">
                     <entry key="enabled" type="xboolean" value="true"/>
@@ -295,6 +295,10 @@
     </config>
     <entry key="customDescription" type="xstring" isnull="true" value=""/>
     <entry key="state" type="xstring" value="EXECUTED"/>
+    <config key="nodecontainer_message">
+        <entry key="type" type="xstring" value="WARNING"/>
+        <entry key="message" type="xstring" value="Training stopped in epoch 51 as the monitored quantity has stopped improving (early stopping)."/>
+    </config>
     <entry key="factory" type="xstring" value="org.knime.dl.keras.base.nodes.learner.DLKerasLearnerNodeFactory"/>
     <entry key="node-name" type="xstring" value="Keras Network Learner"/>
     <entry key="node-bundle-name" type="xstring" value="KNIME Deep Learning - Keras Integration"/>
@@ -322,6 +326,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="d9fc3853-ec38-4dc6-bdeb-f7ae025c4571"/>
+        <entry key="file_store_id" type="xstring" value="a4728f41-d037-4914-b993-2121a37f0c8e"/>
     </config>
 </config>
