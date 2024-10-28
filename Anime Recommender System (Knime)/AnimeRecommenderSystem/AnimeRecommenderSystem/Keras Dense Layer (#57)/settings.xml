@@ -52,11 +52,11 @@
     <entry key="node-bundle-name" type="xstring" value="KNIME Deep Learning - Keras Integration"/>
     <entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.dl.keras"/>
     <entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-bundle-version" type="xstring" value="5.2.0.v202310301554"/>
+    <entry key="node-bundle-version" type="xstring" value="5.3.0.v202312081534"/>
     <entry key="node-feature-name" type="xstring" value="KNIME Deep Learning - Keras Integration"/>
     <entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.dl.keras.feature.group"/>
     <entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
-    <entry key="node-feature-version" type="xstring" value="5.2.0.v202310301554"/>
+    <entry key="node-feature-version" type="xstring" value="5.3.0.v202312081534"/>
     <config key="factory_settings"/>
     <entry key="name" type="xstring" value="Keras Dense Layer"/>
     <entry key="hasContent" type="xboolean" value="true"/>
@@ -74,6 +74,6 @@
     </config>
     <config key="filestores">
         <entry key="file_store_location" type="xstring" value="filestore"/>
-        <entry key="file_store_id" type="xstring" value="724e812b-3d25-4f42-8641-b09b8c88a8e9"/>
+        <entry key="file_store_id" type="xstring" value="650f1752-c89c-43d1-b8c1-bacc0f9af0aa"/>
     </config>
 </config>
