@@ -22,9 +22,5 @@ internalTables/
 
 models/
 
-Anime Recommender System (Knime)/preprocessed_anime_reviews.csv
-Anime Recommender System (Knime)/rating_complete.csv
-Anime Recommender System (Knime)/anime_with_synopsis.csv
-
 wandb/
 data/
