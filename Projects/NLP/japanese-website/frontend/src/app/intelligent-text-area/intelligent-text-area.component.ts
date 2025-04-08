@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { environment } from '../../environments/environment.development';
 import { TranslationService } from '../translation.service';
+import { time } from 'node:console';
 
 @Component({
   selector: 'app-intelligent-text-area',
@@ -12,7 +13,11 @@ import { TranslationService } from '../translation.service';
 export class IntelligentTextAreaComponent {
 
   sentence: string = ""
+  translation: string = ""
   translationService: TranslationService
+
+  timer: NodeJS.Timeout | null = null
+  delay = 3000
 
   constructor(translationService: TranslationService){
     this.translationService = translationService
@@ -21,12 +26,21 @@ export class IntelligentTextAreaComponent {
 
   onValueChange(value: string){
     this.sentence = value
-    let translationObservable = this.translationService.getTranslation(this.sentence)
-    translationObservable.subscribe(translation => {
-      console.log(translation)
-    })
+    if (this.timer){
+      clearTimeout(this.timer)
+    }
+    this.timer = setTimeout(() => this.getTranslation(this), this.delay)
+  }
 
-    
+  getTranslation(ex: IntelligentTextAreaComponent){
+    console.log(ex.translationService)
+    let translationObservable = ex.translationService.getTranslation(this.sentence)
+    translationObservable.subscribe(t => {
+      ex.timer = null
+      if (t && typeof(t) == 'string'){
+        ex.translation = t
+      }
+    })
   }
 
   

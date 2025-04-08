@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment.development';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { format } from 'path';
 
 @Injectable({
@@ -16,9 +16,9 @@ export class TranslationService {
    }
 
   getTranslation(sentence: string){
-    let formData: FormData = new FormData()
+    const formData: FormData = new FormData()
     formData.append("sentence", sentence)
-    return this.httpClient.post(this.apiUrl, formData);
+    return this.httpClient.post(this.apiUrl, formData, {responseType: "text"});
   }
 
 }
