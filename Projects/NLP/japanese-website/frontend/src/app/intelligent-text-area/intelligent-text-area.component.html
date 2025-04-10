@@ -1,9 +1,19 @@
 
 <div class="intelligent-text-area">
     <label>
-        Intelligent Text Area
+        Japanese Composition - 日本語作文
     </label>
 
     <textarea #text (input)="onValueChange(text.value)"></textarea>
-    <p>{{translation}}</p>
+    <div>
+        <p>
+            {{translation}}
+        </p>
+    </div>
+    <div class="word-list">
+        <div class="word" *ngFor="let word of tokens" [matTooltip]="formatProbability(word.probability)" [ngStyle]="{'text-decoration':  'underline', 'text-decoration-color' : getColor(word.probability)}">
+                {{ word.token }}
+        </div>
+    </div>
+
 </div>

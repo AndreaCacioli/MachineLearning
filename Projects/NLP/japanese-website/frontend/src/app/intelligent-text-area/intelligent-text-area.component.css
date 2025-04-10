@@ -13,3 +13,19 @@
 .intelligent-text-area>textarea{
     resize: vertical;
 }
+
+.word-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.word {
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: underline;
+}
+
+.word:hover {
+  transform: scale(1.6);
+}
