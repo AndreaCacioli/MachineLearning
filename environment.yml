@@ -193,12 +193,15 @@ dependencies:
       - datasets==3.2.0
       - dill==0.3.8
       - docker-pycreds==0.4.0
+      - einops==0.8.0
+      - encodec==0.1.1
       - eval-type-backport==0.2.0
       - fonttools==4.55.3
       - frozenlist==1.5.0
       - fsspec==2024.9.0
       - gitdb==4.0.11
       - gitpython==3.1.43
+      - greenlet==3.2.2
       - huggingface-hub==0.26.5
       - importlib-resources==6.4.5
       - ipywidgets==8.1.5
@@ -225,15 +228,22 @@ dependencies:
       - pycparser==2.22
       - pydantic==2.10.3
       - pydantic-core==2.27.1
+      - pygame==2.6.1
       - pyparsing==3.2.0
+      - pyside6==6.9.1
+      - pyside6-addons==6.9.1
+      - pyside6-essentials==6.9.1
+      - pytorch-lightning==2.5.1.post0
       - pytz==2024.2
       - scikit-learn==1.6.0
       - scipy==1.13.1
       - sentry-sdk==2.19.2
       - setproctitle==1.3.4
+      - shiboken6==6.9.1
       - smmap==5.0.1
       - soundfile==0.12.1
       - soxr==0.5.0.post1
+      - sqlalchemy==2.0.41
       - sympy==1.13.1
       - tenacity==9.0.0
       - threadpoolctl==3.5.0
