@@ -94,7 +94,7 @@ class EnglishAccentDataset(Dataset):
 class AccentRecogniser(L.LightningModule):
     def __init__(self, input_dim, num_classes, num_heads=16, num_layers=12, ff_dim=512, dropout=0.2):
         super().__init__()
-        self.save_hyperparameters()
+        self.learning_rate = 0.000001 # Can be auto calculated later
         self.num_classes = num_classes
 
         self.input_dim = input_dim
@@ -121,6 +121,7 @@ class AccentRecogniser(L.LightningModule):
         s = sum(class_weights.values())
         class_weights = [s / (len(EnglishAccentDataset.accents) * class_weights[c]) for c in EnglishAccentDataset.accents]
         self.loss_fn = t.nn.CrossEntropyLoss(weight=t.Tensor(class_weights))
+        self.save_hyperparameters()
 
     def forward(self, x, masks):
         x = x.long()
@@ -145,9 +146,7 @@ class AccentRecogniser(L.LightningModule):
     
 
     def configure_optimizers(self):
-        learning_rate = 0.000001 # Can be auto calculated later
-        optimizer = t.optim.Adam(self.parameters(), learning_rate)
-        return optimizer
+        return t.optim.Adam(self.parameters(), lr = self.learning_rate or self.lr)
     
     def train_dataloader(self):
         train_dataloader = DataLoader(self.train_dataset, batch_size=3, shuffle=True, num_workers=4)
@@ -197,7 +196,8 @@ if __name__ == '__main__':
     L.seed_everything(42, workers=True)
     t.set_float32_matmul_precision('medium')
     model = AccentRecogniser(1024, num_classes=len(EnglishAccentDataset.accents))
-    trainer = L.Trainer(accelerator='gpu', overfit_batches=5, profiler='simple', max_epochs=50, logger=True)
+    trainer = L.Trainer(accelerator='gpu', profiler='simple', max_epochs=50, logger=True, auto_lr_find=True)
+    trainer.tune(model)
     trainer.fit(model)
 
     trainer.test(model)
