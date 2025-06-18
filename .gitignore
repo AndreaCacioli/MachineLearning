@@ -305,4 +305,4 @@ testem.log
 .DS_Store
 Thumbs.db
 
-/lightning_logs
+Projects/EnglishAccentDetection/lightning_logs

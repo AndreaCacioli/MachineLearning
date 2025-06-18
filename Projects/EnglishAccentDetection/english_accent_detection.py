@@ -5,13 +5,16 @@ import torch.nn.functional as F
 import pandas as pd
 import numpy as np
 import random
-import pytorch_lightning as L
+from lightning.pytorch.tuner import Tuner
+from lightning.pytorch import loggers as pl_loggers
+from lightning.pytorch import Trainer, LightningModule, seed_everything
+from lightning.pytorch.callbacks.early_stopping import EarlyStopping
 
 
 from datasets import load_dataset
 from encodec import EncodecModel
 from encodec.utils import convert_audio
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, default_collate
 from sklearn.preprocessing import LabelEncoder
 from torch.utils.data import DataLoader
 from functools import lru_cache
@@ -43,6 +46,10 @@ class EnglishAccentDataset(Dataset):
         with t.no_grad():
             wav, sr = self.hf_dataset[index]['audio']['array'], self.hf_dataset[index]['audio']['sampling_rate'].item()
             target = self.hf_dataset[index]['accent']
+            if t.numel(wav) == 0:
+                print(f"Error: index -> {index}")
+                print(f"accent: {target}")
+                return None
             wav = wav.unsqueeze(0).unsqueeze(0)
             wav = convert_audio(wav, sr, EnglishAccentDataset.encodec.sample_rate, EnglishAccentDataset.encodec.channels)
             frames = EnglishAccentDataset.encodec.encode(wav)
@@ -80,20 +87,12 @@ class EnglishAccentDataset(Dataset):
     def get_label_from_accent(accent: str):
         return EnglishAccentDataset.accents.index(accent)
 
-    def decode_sequence(sequence, mask = None):
-        if mask != None:
-            sequence = sequence[mask]
-            sequence = t.reshape(sequence, [1, 8,sequence.shape[0]//8])
-        sequence = sequence.long()
-        wav = EnglishAccentDataset.encodec.decode([(sequence, None)])
-        wav = wav.squeeze().cpu().numpy()
-        return Audio(wav, rate=EnglishAccentDataset.encodec.sample_rate)
 
-
-class AccentRecogniser(L.LightningModule):
+class AccentRecogniser(LightningModule):
     def __init__(self, input_dim, num_classes, num_heads=16, num_layers=12, ff_dim=512, dropout=0.2):
         super().__init__()
-        self.learning_rate = 0.000001 # Can be auto calculated later
+        self.learning_rate = 0.000001
+        self.batch_size = 16
         self.num_classes = num_classes
 
         self.input_dim = input_dim
@@ -120,7 +119,6 @@ class AccentRecogniser(L.LightningModule):
         s = sum(class_weights.values())
         class_weights = [s / (len(EnglishAccentDataset.accents) * class_weights[c]) for c in EnglishAccentDataset.accents]
         self.loss_fn = t.nn.CrossEntropyLoss(weight=t.Tensor(class_weights))
-        self.save_hyperparameters()
 
     def forward(self, x, masks):
         x = x.long()
@@ -147,18 +145,23 @@ class AccentRecogniser(L.LightningModule):
     def configure_optimizers(self):
         return t.optim.Adam(self.parameters(), lr = self.learning_rate or self.lr)
     
+    def _collate_fn(self, batch):
+        # Remove None items from batch
+        batch = [item for item in batch if item is not None]
+        return default_collate(batch)
+
     def train_dataloader(self):
-        train_dataloader = DataLoader(self.train_dataset, batch_size=3, shuffle=True, num_workers=4)
+        train_dataloader = DataLoader(self.train_dataset, batch_size=self.batch_size, shuffle=True, num_workers=4, collate_fn=self._collate_fn)
         return train_dataloader
 
     def val_dataloader(self):
         val_dataset = EnglishAccentDataset('validation')
-        val_dataloader = DataLoader(val_dataset, batch_size=5, shuffle=False, num_workers=4)
+        val_dataloader = DataLoader(val_dataset, batch_size=self.batch_size, shuffle=False, num_workers=4, collate_fn=self._collate_fn)
         return val_dataloader
 
     def test_dataloader(self):
         test_dataset = EnglishAccentDataset('test')
-        test_dataloader = DataLoader(test_dataset, batch_size=5, shuffle=False, num_workers=4)
+        test_dataloader = DataLoader(test_dataset, batch_size=self.batch_size, shuffle=False, num_workers=4, collate_fn=self._collate_fn)
         return test_dataloader
 
     def _step(self, batch, batch_idx):
@@ -170,7 +173,7 @@ class AccentRecogniser(L.LightningModule):
 
     def training_step(self, batch, batch_idx):
         loss, logits = self._step(batch, batch_idx)
-        self.log("train_loss", loss)
+        self.log("train_loss", loss, prog_bar=True, logger=True, on_step=True)
         return loss
     
     def validation_step(self, batch, batch_idx):
@@ -192,11 +195,28 @@ class AccentRecogniser(L.LightningModule):
 
 
 if __name__ == '__main__':
-    L.seed_everything(42, workers=True)
+    seed_everything(42, workers=True)
     t.set_float32_matmul_precision('medium')
     model = AccentRecogniser(1024, num_classes=len(EnglishAccentDataset.accents))
-    trainer = L.Trainer(accelerator='gpu', profiler='simple', max_epochs=50, logger=True, auto_lr_find=True)
-    trainer.tune(model)
+
+    default_dir = "/home/andreacacioli/Documents/github/MachineLearning/Projects/EnglishAccentDetection"
+
+    # Change the logging directory
+    logger = pl_loggers.TensorBoardLogger(save_dir=default_dir)
+
+    trainer = Trainer(accelerator='gpu', profiler='simple', max_epochs=50, logger = logger, callbacks=[EarlyStopping(monitor="val_loss", mode='min', verbose=True)], default_root_dir=default_dir)
+
+    #tuner = Tuner(trainer)
+    #lr_finder = tuner.lr_find(model)
+    #print(lr_finder.results)
+
+    ## Plot
+    #fig = lr_finder.plot(suggest=True)
+    #fig.show(block = True)
+
+
+    #tuner.scale_batch_size(model, mode='binsearch')
+
     trainer.fit(model)
 
     trainer.test(model)
